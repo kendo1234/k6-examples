@@ -7,3 +7,10 @@ Initialise Options: This script sets number of users and duration within the opt
 Ramp Stages: Ramps virtual user hits up and down across the length of defined duration
 
 Checks: Run a check to verify the correct status code and also assert the transaction time of the response is less than a set amount (here 200ms)
+
+Note on output: k6 usually uses stdout, it can be configured to use JSON output or influx. To send data to influx instance use - 
+
+k6 run --out influxdb=http://localhost:8086/k6 script.js
+
+The data is then sent to a DB named K6 and can be read with something like Grafana
+
