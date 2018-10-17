@@ -1,3 +1,7 @@
+K6 is a powerful framework for performance testing APIs. It uses JavaScript and a BDD-style DSL. 
+
+For more info check the docs - https://k6.io/
+
 SCRIPTS AND WHAT THEY DO
 
 Basic Script: hits an http endpoint with, add users and duration with following command - k6 run --vus 10 --duration 30s basicscript.js
