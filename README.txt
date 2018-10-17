@@ -8,10 +8,13 @@ echo "deb https://dl.bintray.com/loadimpact/deb stable main" | sudo tee -a /etc/
 sudo apt-get update
 sudo apt-get install k6
 
+Example Run (runs the basic script with 10 virtual users, ramped up over 30 seconds): 
+k6 run basicscript.js --vus 10 --duration 30s
+
 
 SCRIPTS AND WHAT THEY DO
 
-Basic Script: hits an http endpoint with, add users and duration with following command - k6 run --vus 10 --duration 30s basicscript.js
+Basic Script: hits an http endpoint.
 
 Initialise Options: This script sets number of users and duration within the options of the script. This is initialised before the main function is called.
 
